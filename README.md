@@ -1,10 +1,17 @@
 
 ## burrowx - kafka offset lag monitor,stored by influxdb
 
+This is a monitoring tool for Apache Kafka that:
+
+1. **Main Purpose**
+- Monitors Kafka consumer group lag
+- Stores metrics in InfluxDB
+- Simpler alternative to the original Burrow project
+
 A simple, lightweight kafka offset monitor, currently metrics stored by influxdb. Motivated by   [Burrow](https://github.com/linkedin/Burrow), but much faster and cleaner and more stable. burrowx is good integration with influxdb and grafana.
 
 
-#### DemoView
+#### View
 ![consumer rate](./doc/rate.jpg)
 
 ![burrowx with influxdb and granfana](./doc/demo.png)
