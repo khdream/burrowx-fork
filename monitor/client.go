@@ -26,7 +26,7 @@ type KafkaClient struct {
 	brokerOffsetTicker *time.Ticker
 
 	topicOffsetMapLock *sync.RWMutex
-	//topic => parition => offset
+	topic => parition => offset
 	topicOffset map[string]map[int32]int64
 
 	importer *Importer
@@ -47,7 +47,7 @@ var (
 )
 
 func NewKafkaClient(cfg *config.Config, cluster string) (*KafkaClient, error) {
-	// Set up sarama config from profile
+	Set up sarama config from profile
 	clientConfig := sarama.NewConfig()
 	clientConfig.Version = sarama.V0_10_2_0
 	profile := cfg.ClientProfile[cfg.Kafka[cluster].ClientProfile]
